@@ -1,0 +1,55 @@
+📂 🔥 FULL REPO STRUCTURE
+
+terraform-aws-infrastructure/
+│── README.md
+│── .gitignore
+│── backend.tf
+│── provider.tf
+│── variables.tf
+│── outputs.tf
+│── terraform.tfvars
+│
+├── environments/
+│   ├── dev/
+│   │   └── terraform.tfvars
+│   ├── prod/
+│       └── terraform.tfvars
+│
+├── modules/
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   │
+│   ├── ec2/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   │
+│   └── s3/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+│
+└── scripts/
+    └── deploy.sh
+
+
+# 🚀 Terraform AWS Infrastructure
+
+## 📌 Overview
+Provision AWS infrastructure using Terraform including VPC, EC2, and S3.
+
+## 🛠️ Tech Stack
+- Terraform (IaC)
+- AWS (Cloud)
+
+## ⚙️ Features
+- Modular Terraform code
+- Remote backend (S3 + DynamoDB)
+- Scalable infrastructure design
+
+## 🚀 Usage
+```bash
+terraform init
+terraform apply
