@@ -1,55 +1,60 @@
-📂 🔥 FULL REPO STRUCTURE
-
-terraform-aws-infrastructure/
-│── README.md
-│── .gitignore
-│── backend.tf
-│── provider.tf
-│── variables.tf
-│── outputs.tf
-│── terraform.tfvars
-│
-├── environments/
-│   ├── dev/
-│   │   └── terraform.tfvars
-│   ├── prod/
-│       └── terraform.tfvars
-│
-├── modules/
-│   ├── vpc/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   │
-│   ├── ec2/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   │
-│   └── s3/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-│
-└── scripts/
-    └── deploy.sh
-
-
-# 🚀 Terraform AWS Infrastructure
+# 🚀 Terraform AWS Infrastructure – DevOps Workflow
 
 ## 📌 Overview
-Provision AWS infrastructure using Terraform including VPC, EC2, and S3.
+This project demonstrates a complete DevOps workflow using Terraform to provision and manage AWS infrastructure.
+
+## 🔄 DevOps Workflow
+
+1. Code → Terraform (IaC)
+2. Validate → terraform fmt & validate
+3. Plan → terraform plan
+4. Deploy → terraform apply
+5. Output → EC2 IP, VPC ID
+6. Destroy → terraform destroy
+
+1. Code
+- Infrastructure defined using Terraform (IaC)
+
+2. Validate
+- terraform fmt
+- terraform validate
+
+3. Plan
+- terraform plan (preview infrastructure changes)
+
+4. Deploy
+- terraform apply (provision resources)
+
+5. Monitor Output
+- Outputs include VPC ID and EC2 Public IP
+
+6. Destroy (Cleanup)
+- terraform destroy
+
+## 🏗️ Architecture
+
+- VPC → Network layer
+- Subnet → Public access
+- EC2 → Compute instance
+
+## ⚙️ Automation
+
+- Shell scripts automate Terraform lifecycle
+- CI/CD pipeline using GitHub Actions validates every commit
 
 ## 🛠️ Tech Stack
-- Terraform (IaC)
-- AWS (Cloud)
+- Terraform
+- AWS
+- GitHub Actions
 
-## ⚙️ Features
-- Modular Terraform code
-- Remote backend (S3 + DynamoDB)
-- Scalable infrastructure design
+## 📊 Infrastructure Created
+- VPC
+- Subnet
+- EC2 Instance
 
-## 🚀 Usage
+## 🚀 How to Run
+
 ```bash
-terraform init
-terraform apply
+./scripts/init.sh
+./scripts/plan.sh
+./scripts/apply.sh
